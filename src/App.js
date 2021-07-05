@@ -11,7 +11,7 @@ function App() {
   }
   async function fetch() {
     const response = await axios
-      .get("uri backend")
+      .get("https:localhost:8080/receitas")
       .then((response) => response.data);
     setReceitas(response);
     console.log(response);
