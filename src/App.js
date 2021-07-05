@@ -1,6 +1,7 @@
 import axios from "axios";
 import React from "react";
 
+
 function App() {
   const [receitas, setReceitas] = React.useState([]);
   const [carregando, setCarregando] = React.useState(null);
@@ -11,7 +12,7 @@ function App() {
   }
   async function fetch() {
     const response = await axios
-      .get("https:localhost:8080/receitas")
+      .get("https://localhost:8080/receitas")
       .then((response) => response.data);
     setReceitas(response);
     console.log(response);
